@@ -13,6 +13,7 @@
 		83148561236F7E7D0079FC3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83148560236F7E7D0079FC3E /* Assets.xcassets */; };
 		83148564236F7E7D0079FC3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83148562236F7E7D0079FC3E /* LaunchScreen.storyboard */; };
 		8314856C236F7E940079FC3E /* Balham.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8314856B236F7E940079FC3E /* Balham.otf */; };
+		83B3527323705FE600312959 /* Assistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B3527223705FE600312959 /* Assistant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		83148563236F7E7D0079FC3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83148565236F7E7D0079FC3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8314856B236F7E940079FC3E /* Balham.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Balham.otf; sourceTree = "<group>"; };
+		83B3527223705FE600312959 /* Assistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assistant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 		8314856D236F811C0079FC3E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				83B3527223705FE600312959 /* Assistant.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			files = (
 				8314855C236F7E7D0079FC3E /* ViewController.swift in Sources */,
 				8314855A236F7E7D0079FC3E /* AppDelegate.swift in Sources */,
+				83B3527323705FE600312959 /* Assistant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

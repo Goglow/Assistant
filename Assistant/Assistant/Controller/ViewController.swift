@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Assistant
 //
-//  Created by Melissa GS on 03/11/2019.
+//  Created by Waggle Glow on 03/11/2019.
 //  Copyright © 2019 Goglow. All rights reserved.
 //
 
@@ -10,16 +10,30 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var assistantLabel: UILabel!
+    @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var addButton: UIButton!
+    
+    var assistant = Assistant()
+
+    @IBAction func didTapDeleteButton() {
+        deleteOperation()
+    }
+    
+    private func deleteOperation() {
+        assistant.deleteAssistant()
+    }
+    
+    @IBAction func didTapAddButton() {
+        addOperation()
+    }
+    
+    private func addOperation() {
+        assistant.addAssistant()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        assistant.numberAssistant = Int(assistantLabel.text)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
-

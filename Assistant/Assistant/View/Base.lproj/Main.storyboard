@@ -31,6 +31,9 @@
                                 <state key="normal" title="Delete Assistant">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapDeleteButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="rpl-29-cZH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Hx-CY-2rj">
                                 <rect key="frame" x="76" y="548" width="223" height="99"/>
@@ -40,6 +43,9 @@
                                 <state key="normal" title="Add Assistant">
                                     <color key="titleColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapAddButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nwn-cl-x1h"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="xxhdpi" translatesAutoresizingMaskIntoConstraints="NO" id="c0f-ty-Igt">
                                 <rect key="frame" x="67" y="54" width="240" height="200"/>
@@ -56,6 +62,11 @@
                         <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="addButton" destination="8Hx-CY-2rj" id="7wb-9B-Ymv"/>
+                        <outlet property="assistantLabel" destination="cFB-dA-Gjb" id="o5Q-vQ-Sce"/>
+                        <outlet property="deleteButton" destination="gp7-Af-gFT" id="v5f-8t-g3S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
