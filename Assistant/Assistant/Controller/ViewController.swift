@@ -8,15 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+    class ViewController: UIViewController {
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
 
-    @IBOutlet weak var assistantLabel: UILabel!
-    @IBOutlet weak var deleteButton: UIButton!
-    @IBOutlet weak var addButton: UIButton!
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+        }
     }
-}

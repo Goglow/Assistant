@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,10 +24,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gp7-Af-gFT">
-                                <rect key="frame" x="76" y="436" width="223" height="99"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gp7-Af-gFT">
+                                <rect key="frame" x="74.5" y="427" width="226" height="100"/>
                                 <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="226" id="BwY-hc-WIX"/>
+                                    <constraint firstAttribute="height" constant="100" id="oVG-uK-WOV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="25"/>
                                 <state key="normal" title="Delete Assistant">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -35,10 +39,13 @@
                                     <action selector="didTapDeleteButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="rpl-29-cZH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Hx-CY-2rj">
-                                <rect key="frame" x="76" y="548" width="223" height="99"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Hx-CY-2rj">
+                                <rect key="frame" x="74.5" y="547" width="226" height="100"/>
                                 <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="4Q4-90-GMD"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="226" id="fi5-9k-g1K"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="25"/>
                                 <state key="normal" title="Add Assistant">
                                     <color key="titleColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -47,30 +54,62 @@
                                     <action selector="didTapAddButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nwn-cl-x1h"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="xxhdpi" translatesAutoresizingMaskIntoConstraints="NO" id="c0f-ty-Igt">
-                                <rect key="frame" x="67" y="54" width="240" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFB-dA-Gjb">
-                                <rect key="frame" x="99" y="164" width="177" height="177"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="55"/>
-                                <color key="textColor" red="0.45878100395202637" green="0.4588506817817688" blue="0.45876574516296387" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Qea-YC-clU">
+                                <rect key="frame" x="67.5" y="20" width="240" height="240"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g6E-hM-DFn">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xxhdpi" translatesAutoresizingMaskIntoConstraints="NO" id="PwS-pm-vLH">
+                                                <rect key="frame" x="40" y="0.0" width="160" height="144"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hr-Z3-rcW">
+                                                <rect key="frame" x="92.5" y="152" width="55" height="49.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="8hr-Z3-rcW" secondAttribute="height" multiplier="55:49" id="Bg6-hb-ofu"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="55" id="mHc-V5-69f"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="50"/>
+                                                <color key="textColor" red="0.21125471591949463" green="0.27401965856552124" blue="0.30818468332290649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="PwS-pm-vLH" firstAttribute="top" secondItem="g6E-hM-DFn" secondAttribute="top" id="3WM-ba-qFe"/>
+                                            <constraint firstItem="8hr-Z3-rcW" firstAttribute="top" secondItem="PwS-pm-vLH" secondAttribute="bottom" constant="8" id="Gg3-2h-cdW"/>
+                                            <constraint firstAttribute="bottom" secondItem="8hr-Z3-rcW" secondAttribute="bottom" constant="38.5" id="Gy0-iL-R5P"/>
+                                            <constraint firstAttribute="trailing" secondItem="PwS-pm-vLH" secondAttribute="trailing" constant="40" id="acr-Zt-r0a"/>
+                                            <constraint firstItem="PwS-pm-vLH" firstAttribute="leading" secondItem="g6E-hM-DFn" secondAttribute="leading" constant="40" id="fKv-q0-apg"/>
+                                            <constraint firstItem="8hr-Z3-rcW" firstAttribute="centerX" secondItem="g6E-hM-DFn" secondAttribute="centerX" id="ug4-Cl-09p"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Qea-YC-clU" secondAttribute="height" multiplier="1:1" id="YXL-k4-xoz"/>
+                                    <constraint firstAttribute="width" constant="240" id="vFx-mz-Tq0"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qea-YC-clU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1f4-TC-kvE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8Hx-CY-2rj" secondAttribute="bottom" constant="20" id="7kB-WN-nkf"/>
+                            <constraint firstItem="Qea-YC-clU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ao3-KD-2nt"/>
+                            <constraint firstItem="8Hx-CY-2rj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YaR-11-DXk"/>
+                            <constraint firstItem="8Hx-CY-2rj" firstAttribute="top" secondItem="gp7-Af-gFT" secondAttribute="bottom" constant="20" id="aDx-kf-fca"/>
+                            <constraint firstItem="gp7-Af-gFT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h4b-dM-12H"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="addButton" destination="8Hx-CY-2rj" id="7wb-9B-Ymv"/>
-                        <outlet property="assistantLabel" destination="cFB-dA-Gjb" id="o5Q-vQ-Sce"/>
                         <outlet property="deleteButton" destination="gp7-Af-gFT" id="v5f-8t-g3S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+            <point key="canvasLocation" x="117.5" y="116.5"/>
         </scene>
     </scenes>
     <resources>
