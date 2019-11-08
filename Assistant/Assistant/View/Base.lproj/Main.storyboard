@@ -103,8 +103,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="addButton" destination="8Hx-CY-2rj" id="7wb-9B-Ymv"/>
-                        <outlet property="deleteButton" destination="gp7-Af-gFT" id="v5f-8t-g3S"/>
+                        <outlet property="addButton" destination="8Hx-CY-2rj" id="w0E-EN-SKI"/>
+                        <outlet property="assistantLabel" destination="8hr-Z3-rcW" id="2Wa-CY-7CQ"/>
+                        <outlet property="deleteButton" destination="gp7-Af-gFT" id="uDn-t2-usA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
