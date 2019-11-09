@@ -8,4 +8,14 @@
 
 import Foundation
 
-
+class Assistant {
+    var numberAssistant = 0
+    
+    func addAssistant() {
+        
+    }
+    
+    func deleteAssistant() {
+        
+    }
+}

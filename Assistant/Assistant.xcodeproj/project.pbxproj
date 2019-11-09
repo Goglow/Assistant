@@ -14,6 +14,7 @@
 		83148564236F7E7D0079FC3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83148562236F7E7D0079FC3E /* LaunchScreen.storyboard */; };
 		8314856C236F7E940079FC3E /* Balham.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8314856B236F7E940079FC3E /* Balham.otf */; };
 		83B3527323705FE600312959 /* Assistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B3527223705FE600312959 /* Assistant.swift */; };
+		83E1F5762376E1BA00685FBB /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E1F5752376E1BA00685FBB /* PopUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		83148565236F7E7D0079FC3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8314856B236F7E940079FC3E /* Balham.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Balham.otf; sourceTree = "<group>"; };
 		83B3527223705FE600312959 /* Assistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assistant.swift; sourceTree = "<group>"; };
+		83E1F5752376E1BA00685FBB /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				8314855B236F7E7D0079FC3E /* ViewController.swift */,
+				83E1F5752376E1BA00685FBB /* PopUpViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				8314855C236F7E7D0079FC3E /* ViewController.swift in Sources */,
 				8314855A236F7E7D0079FC3E /* AppDelegate.swift in Sources */,
 				83B3527323705FE600312959 /* Assistant.swift in Sources */,
+				83E1F5762376E1BA00685FBB /* PopUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
