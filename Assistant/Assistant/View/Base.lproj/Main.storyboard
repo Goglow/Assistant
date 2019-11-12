@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="landscape">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -21,67 +21,79 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Assistant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gp7-Af-gFT">
-                                <rect key="frame" x="421" y="255" width="226" height="100"/>
+                                <rect key="frame" x="74.5" y="427" width="226" height="100"/>
                                 <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="226" id="BwY-hc-WIX"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="226" id="BwY-hc-WIX">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="452"/>
+                                    </constraint>
                                     <constraint firstAttribute="height" constant="100" id="oVG-uK-WOV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="25"/>
                                 <state key="normal" title="Delete Assistant">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="50"/>
+                                </variation>
                                 <connections>
                                     <action selector="didTapDeleteButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="5VG-YI-Itd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Hx-CY-2rj">
-                                <rect key="frame" x="20" y="255" width="226" height="100"/>
+                                <rect key="frame" x="74.5" y="547" width="226" height="100"/>
                                 <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="4Q4-90-GMD"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="226" id="fi5-9k-g1K"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="226" id="fi5-9k-g1K">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="452"/>
+                                    </constraint>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="25"/>
                                 <state key="normal" title="Add Assistant">
                                     <color key="titleColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="50"/>
+                                </variation>
                                 <connections>
                                     <action selector="didTapAddButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="usx-EE-BSz"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Qea-YC-clU">
-                                <rect key="frame" x="213.5" y="6" width="240" height="240"/>
+                                <rect key="frame" x="67.5" y="20" width="240" height="240"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g6E-hM-DFn">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xxhdpi" translatesAutoresizingMaskIntoConstraints="NO" id="PwS-pm-vLH">
-                                                <rect key="frame" x="40" y="0.0" width="160" height="144"/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hr-Z3-rcW">
-                                                <rect key="frame" x="92.5" y="152" width="55" height="49.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="8hr-Z3-rcW" secondAttribute="height" multiplier="55:49" id="Bg6-hb-ofu"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="55" id="mHc-V5-69f"/>
-                                                </constraints>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hr-Z3-rcW">
+                                                <rect key="frame" x="106.5" y="180" width="27.5" height="49.5"/>
                                                 <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="50"/>
                                                 <color key="textColor" red="0.21125471591949463" green="0.27401965856552124" blue="0.30818468332290649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="100"/>
+                                                </variation>
                                             </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xxhdpi" translatesAutoresizingMaskIntoConstraints="NO" id="PwS-pm-vLH">
+                                                <rect key="frame" x="4" y="0.0" width="232" height="172"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="PwS-pm-vLH" secondAttribute="height" multiplier="58:43" id="fi4-5e-UKF"/>
+                                                    <constraint firstAttribute="width" constant="232" id="qlZ-Bv-JEb"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="PwS-pm-vLH" firstAttribute="top" secondItem="g6E-hM-DFn" secondAttribute="top" id="3WM-ba-qFe"/>
-                                            <constraint firstItem="8hr-Z3-rcW" firstAttribute="top" secondItem="PwS-pm-vLH" secondAttribute="bottom" constant="8" id="Gg3-2h-cdW"/>
-                                            <constraint firstAttribute="bottom" secondItem="8hr-Z3-rcW" secondAttribute="bottom" constant="38.5" id="Gy0-iL-R5P"/>
-                                            <constraint firstAttribute="trailing" secondItem="PwS-pm-vLH" secondAttribute="trailing" constant="40" id="acr-Zt-r0a"/>
-                                            <constraint firstItem="PwS-pm-vLH" firstAttribute="leading" secondItem="g6E-hM-DFn" secondAttribute="leading" constant="40" id="fKv-q0-apg"/>
-                                            <constraint firstItem="8hr-Z3-rcW" firstAttribute="centerX" secondItem="g6E-hM-DFn" secondAttribute="centerX" id="ug4-Cl-09p"/>
+                                            <constraint firstAttribute="trailing" secondItem="PwS-pm-vLH" secondAttribute="trailing" constant="4" id="0ap-XO-8Uu"/>
+                                            <constraint firstItem="PwS-pm-vLH" firstAttribute="top" secondItem="g6E-hM-DFn" secondAttribute="top" id="GRg-vY-bUA"/>
+                                            <constraint firstItem="PwS-pm-vLH" firstAttribute="leading" secondItem="g6E-hM-DFn" secondAttribute="leading" constant="4" id="Prf-21-y6G"/>
+                                            <constraint firstItem="8hr-Z3-rcW" firstAttribute="top" secondItem="PwS-pm-vLH" secondAttribute="bottom" constant="8" id="lBM-pc-FYf"/>
+                                            <constraint firstItem="8hr-Z3-rcW" firstAttribute="centerX" secondItem="g6E-hM-DFn" secondAttribute="centerX" id="p0N-En-7SY"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -91,7 +103,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zcz-pR-s5S">
-                                <rect key="frame" x="264.5" y="236" width="138" height="138"/>
+                                <rect key="frame" x="118.5" y="264.5" width="138" height="138"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Zcz-pR-s5S" secondAttribute="height" multiplier="1:1" id="9oD-pA-Uuh"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="mht-rf-kHY"/>
@@ -100,6 +112,9 @@
                                 <state key="normal" title="Informations">
                                     <color key="titleColor" red="0.99810773129999997" green="0.33546972269999997" blue="0.13076657059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="50"/>
+                                </variation>
                                 <connections>
                                     <segue destination="SgC-JP-2KL" kind="show" id="9Ju-w7-1Jd"/>
                                 </connections>
@@ -136,33 +151,47 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.5" y="116.5"/>
+            <point key="canvasLocation" x="116" y="116.49175412293854"/>
         </scene>
         <!--Pop Up View Controller-->
         <scene sceneID="lDS-Sx-DpM">
             <objects>
                 <viewController storyboardIdentifier="sbPopUpID" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="SgC-JP-2KL" customClass="PopUpViewController" customModule="Assistant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8lM-nh-SF7">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Be-th-SKQ">
-                                <rect key="frame" x="213.5" y="6" width="240" height="240"/>
+                                <rect key="frame" x="67.5" y="20" width="240" height="240"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Assistant allows you to count the presence of up to 10 assistants. The minimum is set to 0." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNq-11-Bbl">
-                                        <rect key="frame" x="7.5" y="7.5" width="224" height="224"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Assistant allows you to count the presence of up to 10 assistants. The minimum is set to 0." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNq-11-Bbl">
+                                        <rect key="frame" x="8" y="8" width="224" height="224"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="224" id="geg-ZK-3k0"/>
+                                            <constraint firstAttribute="width" secondItem="tNq-11-Bbl" secondAttribute="height" multiplier="1:1" id="snC-EL-Yte"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="20"/>
                                         <color key="textColor" red="0.2112547159" green="0.27401965859999999" blue="0.30818468329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="40"/>
+                                        </variation>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPE-bj-13d">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPE-bj-13d">
                                         <rect key="frame" x="90" y="171" width="60" height="60"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="DPE-bj-13d" secondAttribute="height" multiplier="1:1" id="PHT-d5-Nhv"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="QTJ-Cl-Xf8">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="120"/>
+                                            </constraint>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="20"/>
                                         <state key="normal" title="Close">
                                             <color key="titleColor" red="0.99810773129999997" green="0.33546972269999997" blue="0.13076657059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="40"/>
+                                        </variation>
                                         <connections>
                                             <action selector="closePopUp:" destination="SgC-JP-2KL" eventType="touchUpInside" id="d5c-sC-7Ns"/>
                                         </connections>
@@ -170,10 +199,18 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.99469453096389771" green="0.71347010135650635" blue="0.29678082466125488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="tNq-11-Bbl" firstAttribute="top" secondItem="9Be-th-SKQ" secondAttribute="top" constant="8" id="1Aj-sY-Rg0"/>
+                                    <constraint firstAttribute="bottom" secondItem="DPE-bj-13d" secondAttribute="bottom" constant="9" id="5Bd-1g-OUM"/>
+                                    <constraint firstItem="tNq-11-Bbl" firstAttribute="leading" secondItem="9Be-th-SKQ" secondAttribute="leading" constant="8" id="6IE-Io-KaL"/>
                                     <constraint firstAttribute="width" constant="240" id="NtI-CN-hc1"/>
                                     <constraint firstAttribute="width" secondItem="9Be-th-SKQ" secondAttribute="height" multiplier="1:1" id="PNn-Z1-hjS"/>
-                                    <constraint firstAttribute="width" constant="240" id="UuT-nX-kQ7"/>
+                                    <constraint firstAttribute="width" constant="240" id="UuT-nX-kQ7">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="480"/>
+                                    </constraint>
                                     <constraint firstAttribute="width" secondItem="9Be-th-SKQ" secondAttribute="height" multiplier="1:1" id="kOx-V6-ypp"/>
+                                    <constraint firstAttribute="trailing" secondItem="tNq-11-Bbl" secondAttribute="trailing" constant="8" id="kWL-3h-jmR"/>
+                                    <constraint firstAttribute="bottom" secondItem="tNq-11-Bbl" secondAttribute="bottom" constant="8" id="sAV-BR-kZR"/>
+                                    <constraint firstItem="DPE-bj-13d" firstAttribute="centerX" secondItem="9Be-th-SKQ" secondAttribute="centerX" id="vhK-06-6Hn"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -192,6 +229,7 @@
                             </view>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="9Be-th-SKQ" firstAttribute="centerX" secondItem="8lM-nh-SF7" secondAttribute="centerX" id="1LR-uX-hvQ"/>
                             <constraint firstItem="9Be-th-SKQ" firstAttribute="centerY" secondItem="8lM-nh-SF7" secondAttribute="centerY" constant="-193.5" id="Bbq-h2-lpp"/>
                             <constraint firstItem="9Be-th-SKQ" firstAttribute="centerY" secondItem="8lM-nh-SF7" secondAttribute="centerY" id="Hfu-iZ-j8G">
                                 <variation key="heightClass=compact" constant="-61.5"/>

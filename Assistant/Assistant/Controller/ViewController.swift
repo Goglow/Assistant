@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     
     private func deleteOperation() {
         assistant.deleteAssistant()
+        assistantLabel.text = String(assistant.numberAssistant)
     }
     
     @IBAction func didTapAddButton() {
@@ -33,6 +34,10 @@ class ViewController: UIViewController {
     
     private func addOperation() {
         assistant.addAssistant()
+        assistantLabel.text = String(assistant.numberAssistant)
+        if assistantLabel.text == "10" {
+            viewDidAppear(true)
+        }
     }
     
     override func viewDidLoad() {
@@ -52,4 +57,5 @@ class ViewController: UIViewController {
         
         self.present(alert, animated: true, completion: nil)
     }
+    
 }

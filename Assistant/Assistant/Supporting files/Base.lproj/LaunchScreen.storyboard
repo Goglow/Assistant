@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,14 +16,16 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="xxhdpi" translatesAutoresizingMaskIntoConstraints="NO" id="qLR-Qi-iMp">
-                                <rect key="frame" x="115" y="262" width="144" height="144"/>
+                                <rect key="frame" x="240" y="368" width="288" height="288"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="qLR-Qi-iMp" secondAttribute="height" multiplier="1:1" id="Lqy-rG-q7q"/>
-                                    <constraint firstAttribute="width" constant="144" id="hV8-cz-AfL"/>
+                                    <constraint firstAttribute="width" constant="144" id="hV8-cz-AfL">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="288"/>
+                                    </constraint>
                                 </constraints>
                             </imageView>
                         </subviews>
