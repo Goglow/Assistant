@@ -9,19 +9,31 @@
 import Foundation
 
 class Assistant {
-    var numberAssistant = 0
     
-    func addAssistant() {
-        if numberAssistant < 10 {
-            self.numberAssistant += 1
-            print("Add Assistant!")
+    let assistantLimit = 10
+    var numberAssistant: Int = 0 {
+        didSet {
+            if numberAssistant < 0 {
+                numberAssistant = 0
+            } else if numberAssistant > assistantLimit {
+                numberAssistant = assistantLimit
+                sendNotification(name: "limitReached")
+            }
+            sendNotification(name: "assistantSet")
         }
     }
     
+    func addAssistant() {
+        self.numberAssistant += 1
+    }
+    
     func deleteAssistant() {
-        if numberAssistant > 0 {
-            self.numberAssistant -= 1
-            print("Delete Assistant!")
-        }
+        self.numberAssistant -= 1
+    }
+    
+    private func sendNotification(name: String) {
+        let name = Notification.Name(rawValue: name)
+        let notification = Notification(name: name)
+        NotificationCenter.default.post(notification)
     }
 }

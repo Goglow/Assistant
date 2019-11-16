@@ -19,7 +19,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Assistant" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mVCID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="Assistant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,7 +41,7 @@
                                     <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="50"/>
                                 </variation>
                                 <connections>
-                                    <action selector="didTapDeleteButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="5VG-YI-Itd"/>
+                                    <action selector="didTapDeleteButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nH7-zk-R4L"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Hx-CY-2rj">
@@ -61,7 +61,7 @@
                                     <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="50"/>
                                 </variation>
                                 <connections>
-                                    <action selector="didTapAddButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="usx-EE-BSz"/>
+                                    <action selector="didTapAddButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9V0-qx-DfL"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Qea-YC-clU">
@@ -144,9 +144,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="addButton" destination="8Hx-CY-2rj" id="w0E-EN-SKI"/>
+                        <outlet property="addButton" destination="8Hx-CY-2rj" id="GIq-Gj-4bI"/>
                         <outlet property="assistantLabel" destination="8hr-Z3-rcW" id="2Wa-CY-7CQ"/>
-                        <outlet property="deleteButton" destination="gp7-Af-gFT" id="uDn-t2-usA"/>
+                        <outlet property="deleteButton" destination="gp7-Af-gFT" id="syD-R7-S8k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -9,53 +9,44 @@
 import UIKit
 
 class ViewController: UIViewController {
-        
-    // View outlets
+    
     @IBOutlet weak var assistantLabel: UILabel!
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var addButton: UIButton!
     
-    // Class Assistant
     var assistant = Assistant()
-        
-    // View actions
-    @IBAction func didTapDeleteButton() {
-        deleteOperation()
-    }
-    
-    private func deleteOperation() {
-        assistant.deleteAssistant()
-        assistantLabel.text = String(assistant.numberAssistant)
-    }
-    
-    @IBAction func didTapAddButton() {
-        addOperation()
-    }
-    
-    private func addOperation() {
-        assistant.addAssistant()
-        assistantLabel.text = String(assistant.numberAssistant)
-        if assistantLabel.text == "10" {
-            viewDidAppear(true)
-        }
-    }
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
+        addModelNotificationObserver(name: "limitReached")
+        addModelNotificationObserver(name: "assistantSet")
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        createAlert(title: "Limit reached", message: "The maximum number of assistants that can be added has just been reached.")
-    }
-    
-    func createAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
-        
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: { (action) in
-            alert.dismiss(animated: true, completion: nil)
+    @objc func limitReached() {
+        let message = "The maximum number of assistants that can be added has just been reached."
+        let alert = UIAlertController(title: "Limit Reached", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: {(_: UIAlertAction!) in
         }))
-        
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    @objc func assistantSet() {
+        assistantLabel.text = String(assistant.numberAssistant)
+    }
+ 
+    @IBAction func didTapDeleteButton(_ sender: Any) {
+        assistant.deleteAssistant()
+    }
+    
+    @IBAction func didTapAddButton(_ sender: Any) {
+        assistant.addAssistant()
+    }
+    
+    private func addModelNotificationObserver(name: String) {
+        let selector = Selector((name))
+        NotificationCenter.default.addObserver(
+        self, selector: selector,
+        name: Notification.Name(rawValue: name), object: nil)
     }
     
 }
